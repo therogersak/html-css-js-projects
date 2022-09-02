@@ -14,7 +14,7 @@ function handleOnPasteOtp(e){
         inputs.forEach((input, index)=> (
             input.value = value[index]
         ))
-    }
+    } 
 }
 
 
@@ -34,20 +34,20 @@ function handleOtp(e){
     }
 
     if(fieldIndex = inputs.length -1){
-        submit()
+        // submit()
     }
 }
 
-function submit(){
-    console.log("submitting...");
+// function submit(){
+//     console.log("submitting...");
 
-    let otp = "";
+//     let otp = "";
 
-    inputs.forEach((input) => {
-        opt += input.value;
-        input.disabled = true;
-        input.classList.add("disabled");
-    })
-    console.log(opt);
-    //call api below
-}
+//     inputs.forEach((input) => {
+//         otp += input.value;
+//         input.disabled = true;
+//         input.classList.add("disabled");
+//     })
+//     console.log(opt);
+//     //call api below
+// }
