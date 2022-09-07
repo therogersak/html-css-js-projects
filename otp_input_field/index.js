@@ -24,6 +24,13 @@ function handleOtp(e){
     input.value = "";
     input.value = value ? value[0]: "";
 
+    // Switch char in input.value if !input.value == "" 
+    if(e.key.length == 1){
+        if(input.value.length == 1){
+             input.value = e.key
+        }
+    }
+
     let fieldIndex = input.dataset.index;
     if(value.length > 0 && fieldIndex < inputs.length - 1){
         input.nextElementSibling.focus();
