@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.game {
+  width: 600px;
+  height: 250px;
+  border: 1px solid #000;
+  margin: auto;
+}
+
+.dino {
+  width: 50px;
+  height: 70px;
+  background: url(https://www.pngkey.com/png/full/16-169452_cute-dinosaurs-google-search-cute-dinosaur.png);
+  background-size: auto 74px;
+  position: relative;
+  top: 143px;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 143;
+  }
+
+  30% {
+    top: 100px;
+  }
+
+  50% {
+    top: 60px;
+  }
+
+  80% {
+    top: 115px;
+  }
+
+  100% {
+    top: 143px;
+  }
+}
+
+
+.monster{
+    width: 30px;
+    height: 40px;
+    position: relative;
+    top: 91px;
+    left: 500px;
+    background: url('https://www.pngmart.com/files/4/Blue-Monster-PNG-HD.png');
+    background-size: 30px 40px;  
+    animation: monster-block 1.2s linear;
+}
+
+@keyframes monster-block {
+    0%{
+        left: 600px;
+    }
+
+    100%{
+        left: -20px;
+    }
+}
