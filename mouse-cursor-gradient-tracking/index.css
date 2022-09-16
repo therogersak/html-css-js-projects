@@ -6,11 +6,8 @@ body {
   font-family: Montserrat;
   font-weight: bold;
   box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
   background: #222;
+  min-height: 200vh;
 }
 
 *,
