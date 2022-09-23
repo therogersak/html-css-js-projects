@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker - therogersak</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="expense-container">
+      <div class="expense-top">
+        <h3>Expense Tracker</h3>
+        <div class="boxs">
+          <div class="income">
+            <p>Income</p>
+            <span id="income-box">$0</span>
+          </div>
+          <div class="line"></div>
+          <div class="expense">
+            <p>Expense</p>
+            <span id="expense-box">$0</span>
+          </div>
+        </div>
+      </div>
+      <div class="expense-bottom">
+        <div class="input">
+          <label for="">Totaly Monthly Income</label>
+          <input
+            type="number"
+            name="income"
+            id="income"
+            placeholder="$1000"
+            required
+          />
+        </div>
+
+        <div class="input">
+          <label for="">Expense Name</label>
+          <input
+            type="text"
+            name="expense name"
+            required
+            id="title"
+            placeholder="For Shoping"
+          />
+        </div>
+
+        <div class="input">
+          <label for="">Expense Amount</label>
+          <input
+            type="number"
+            name="amount"
+            required
+            id="expense"
+            placeholder="$10"
+          />
+        </div>
+
+        <button type="submit" onclick="add()" id="btn">ADD EXPENSE</button>
+      </div>
+
+      <div class="expense-lists" id="expense-lists"></div>
+    
+    </div>
+
+    <!-- script file -->
+    <script src="./index.js"></script>
+  </body>
+</html>
