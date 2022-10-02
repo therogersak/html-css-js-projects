@@ -5,5 +5,6 @@ document.querySelectorAll(".name").forEach((element) => {
         } else {
             event.target.nextElementSibling.classList.remove("filled");
         }
+        
     });
 });
