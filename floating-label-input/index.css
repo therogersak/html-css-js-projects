@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #222;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.input-box {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+
+.label{
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    transition: all 0.2s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #b3b3b3;
+}
+
+.name{
+    padding: 0.8rem;
+    width: 100%;
+    height: 100%;
+    border : 2px solid #2f2c45;
+    background: #272530;
+    border: 5px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.label::before{
+    content: '';
+    height: 5px;
+    background: #272530;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    z-index: -1;
+}
+
+.name:focus{
+    border:  2px solid #7e4ccb;
+}
+
+.name:focus + .label, .filled{
+    top: -10px;
+    color: #7e4ccb;
+    font-size: 14px;
+}
+
+.name::placeholder{
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.name:focus::placeholder{
+    opacity: 1;
+}
