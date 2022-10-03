@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #222;
+  min-height: 100vh;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid royalblue 1px;
+  animation: wave0 0.8s forwards;
+  opacity: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #686ffd;
+  transition: all .3s;
+}
+
+@keyframes wave {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+  }
+
+  90% {
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 50%;
+    height: 50px;
+    opacity: 0;
+  }
+}
