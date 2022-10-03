@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #222;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container form {
+  width: 100%;
+}
+
+.container form .input-box {
+  position: relative;
+  width: 100%;
+  background: rgba(65, 105, 225, 0.563);
+  margin: 30px 0;
+}
+
+.input {
+  padding: 0.8rem;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #2f2c45;
+  background: #272530;
+  border: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+  color: #fff;
+}
+
+.label {
+  position: absolute;
+  top: 14px;
+  left: 5px;
+  color: #b3b3b3;
+  padding: 0 2px;
+  transition: 0.2s all;
+  z-index: 1;
+}
+
+.input:focus {
+  border: #7e4ccb 2px solid;
+}
+
+.input::placeholder {
+  opacity: 0;
+  font-size: 16px;
+  color: gray;
+}
+
+.input:focus::placeholder {
+  opacity: 1;
+}
+
+.label::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  background: #272530;
+  color: 100%;
+  width: 100%;
+  height: 5px;
+  z-index: -1;
+}
+
+.input:focus + .label,
+.filled {
+  top: -10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #fff;
+  font-size: 16px;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#password {
+  position: relative;
+}
+
+#eyeIcon {
+  position: absolute;
+  top: 15px;
+  right: -5px;
+  color: #fff;
+  z-index: 1100;
+  cursor: pointer;
+}

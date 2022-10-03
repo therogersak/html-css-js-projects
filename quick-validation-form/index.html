@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Form Validation - therogersak</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form onsubmit="return validate(e)" novalidate>
+        <div class="username input-box">
+          <input
+            type="text"
+            name="username"
+            id="username"
+            class="username input"
+            required
+            placeholder="please enter username"
+          />
+          <label for="username" class="label">Username</label>
+        </div>
+
+        <div class="email input-box">
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="email input"
+            required
+            placeholder="please enter email"
+          />
+          <label for="email" class="label">Email</label>
+        </div>
+
+        <div class="password input-box">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="password input"
+            required
+            placeholder="please enter password"
+          />
+          <label for="password" class="label">Password</label>
+          <span>
+            <i class="ri-eye-line" id="eyeIcon"></i>
+          </span>
+        </div>
+        <input type="submit" value="Submit" class="btn" id="btn" />
+      </form>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
