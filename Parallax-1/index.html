@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax -1</title>
+  </head>
+  <style>
+    img {
+      position: fixed;
+      z-index: 0;
+      transition: 0.3s;
+    }
+
+    body img:nth-child(1) {
+      width: 200px;
+      top: 30px;
+    }
+
+    body img:nth-child(2) {
+      width: 400px;
+      left: 500px;
+      top: 300;
+    }
+
+    body img:nth-child(3) {
+      width: 100px;
+      left: 500;
+      top: 600px;
+    }
+
+    .home-content {
+      position: relative;
+      z-index: 1;
+      padding: 100px 15px;
+    }
+  </style>
+  <body>
+    <img src="./img/blue-diamond-png-7.png" alt="" />
+    <img src="./img/blue-diamond-png-7.png" alt="" />
+    <img src="./img/blue-diamond-png-7.png" alt="" />
+    <img src="./img/blue-diamond-png-7.png" alt="" />
+    <img src="./img/blue-diamond-png-7.png" alt="" />
+    <img src="./img/blue-diamond-png-7.png" alt="" />
+    <div class="home-content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi esse
+        exercitationem natus corporis fugiat labore, pariatur, quisquame
+        accusamus blanditiis voluptatum natus aut fugit. Temporibus, commodi eum
+        officiis voluptates voluptatum quidem, velit necessitatibus beatae dicta
+        iure ut obcaecati error provident nihil illo aliquam quaerat doloribus.
+        Quam iure laudantium id culpa reprehenderit incidunt cum quidem,
+        blanditiis voluptatem nostrum. Iure odio minima, amet recusandae ipsum
+        quibusdam doloribus inventore laudantium commpariatur deserunt iste
+        distinctio soluta aspernatur placeat, similique quaerat saepe quisquam
+        nostrum accusantium suscipit sint in. Consectetur, iusto reprehenderit
+        a, quae animi fugit necessitatibus nam libero voluptas, nostrum vel
+        molestiae blanditiis amet! Repellendus laborum quas fugit perspiciatis
+        quidem at, mollitia earum voluptatum eveniet aut nobis, harum deleniti
+        nulla libero, voluptas vero corrupti veniam nostrum nam. Nostrum
+        reprehenderit ipsa similique odit placeat, enim dolorum tempore optio,
+        unde consequuntur suscipit et at, laudantium officia? Illo quod facere
+        vitae quaerat, rerum mollitia necessitatibus. Hic, doloremque. Est,
+        voluptate. Vel expedita eaque totam harum eveniet reiciendis recusandae,
+        voluptatibus voluptatem, aliquam exercitationem quis dolorum culpa
+        obcaecati.
+      </p>
+      <hr />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis ex
+        consectetur aliquam voluptatibus illo ullam iusto dolores. Sunt, ad
+        delectus tenetur veniam illum minus velit itaque! Autem tempore impedit
+        dolorum temporibus et praesentium assumenda repellat adipisci ipsa
+        inventore nemo optio dignissimos voluptates, fuga cupiditate quidem
+        expedita esse velit laudantium consequatur!
+      </p>
+      <hr />
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+        repudiandae delectus! Incidunt, itaque laborum impedit, qui magni
+        praesentium voluptas maxime illo dignissimos iure labore quo placeat,
+        laboriosam dolore est corrupti cumque! Voluptatum qui magnam sunt ullam
+        cum! Blanditiis illo a eligendi recusandae modi alias deserunt vel fugit
+        quo debitis soluta sed, commodi atque, architecto, dicta magnam neque
+        consequuntur earum eaque. Quam, incidunt sit quae esse blanditiis
+        voluptatibus quisquam rerum officiis repellendus obcaecati et harum
+        explicabo atque perferendis deserunt distinctio vero, cupiditate omnis
+        alias facere. Assumenda, officiis aliquid voluptas incidunt perferendis
+        quo repellendus asperiores sequi odit molestiae impedit nam porro earum!
+      </p>
+
+      <hr />
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa eius
+        dolorem quod dignissimos ipsum non iste illum! Cumque voluptatem
+        eligendi impedit laudantium rerum beatae velit. Quo, iste officiis?
+        Tenetur quas temporibus distinctio, quae quis voluptate perferendis,
+        enim quos error suscipit reprehenderit modi explicabo voluptatibus,
+        rerum aperiam quia deserunt. Tenetur commodi expedita consequuntur
+        nesciunt ullam! Hic illum incidunt dolorum ex suscipit dicta, facilis
+        accusantium distinctio asperiores, quasi excepturi maiores nemo eius
+        delectus sequi fuga voluptatum pariatur dolores eos sed! Asperiores
+        eaque, optio atque explicabo doloremque neque cupiditate laborum aperiam
+        saepe veniam quo fugit mollitia maiores sunt nemo vel dolorum
+        consequatur quaerat itaque! Sunt in inventore atque veritatis eum
+        reiciendis ratione voluptatibus autem odit est, mollitia itaque facere
+        eos earum ab ut officia fugiat vel quia. In pariatur, velit sapiente
+        deleniti repellendus dicta numquam perferendis nihil exercitationem.
+        Dolores neque praesentium nesciunt, dolorem voluptatem at doloribus
+        saepe repellendus perferendis culpa excepturi natus deleniti pariatur
+        voluptatum ad, quaerat mollitia eum veritatis veniam facere. Nihil amet
+        fuga aliquid officiis quo totam, quibusdam accusantium ullam ea corporis
+        sunt accusamus veritatis distinctio numquam itaque possimus, ipsum quae
+        blanditiis veniam eveniet. Praesentium nostrum iusto fuga, unde eos,
+        enim aperiam ipsum consequuntur hic nobis perferendis error repudiandae,
+        atque deserunt.
+      </p>
+    </div>
+
+    <script>
+      const handleScroll = (event) => {
+        const scrollPosition = event.target.scrollingElement.scrollTop;
+
+        const images = document.querySelectorAll("img");
+
+        images.forEach((element) => {
+          element.style.transform = `translate(0, ${scrollPosition / 10}px)`;
+        });
+      };
+
+      window.addEventListener("scroll", handleScroll);
+    </script>
+  </body>
+</html>

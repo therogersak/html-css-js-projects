@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashing Title</title>
+  </head>
+  <body>
+    <h1>See on our Top</h1>
+    <strong>Title</strong>
+    <script>
+      let showingAlert = false;
+      const title = "CODE WITH THEROGERSAK";
+      const message = "(30) New Messages";
+
+      const changeTitle = setInterval(() => {
+        document.title = showingAlert ? message : title;
+        showingAlert = !showingAlert;
+      }, 700);
+    </script>
+  </body>
+</html>
