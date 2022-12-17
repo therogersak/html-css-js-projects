@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Generator - therogersak</title>
+  </head>
+  <style>
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+
+    .preview {
+      width: min(450px);
+      height: 300px;
+      background: red;
+      border-radius: 30px;
+      margin: 1rem 0;
+    }
+
+    #code{
+    margin: 1rem 0;
+    background: black;
+    color: #fff;
+    width: fit-content;
+    padding: 10px;
+    }
+  </style>
+  <body>
+    <div>
+      <h1>Gradient Generator - therogersak</h1>
+      <div>
+        <div id="preview" class="bg-gadient preview"></div>
+      </div>
+      <input
+        type="color"
+        name="first-gradient"
+        id="f-gradient"
+        value="#ffffff"
+      />
+      <input
+        type="color"
+        name="second-gradient"
+        id="s-gradient"
+        value="#ffffff"
+      />
+
+      <div id="code">code</div>
+    </div>
+
+    <script>
+      const val1 = document.getElementById("f-gradient");
+      const val2 = document.getElementById("s-gradient");
+      const preview = document.getElementById("preview");
+      const code = document.getElementById("code");
+
+      const changeColor = () => {
+        preview.style.background = `linear-gradient(180deg, ${val1.value}, ${val2.value})`;
+        code.innerText = preview.style.background;
+        console.log(val1.value, val2.value);
+      };
+
+      val1.addEventListener("input", changeColor);
+      val2.addEventListener("input", changeColor);
+    </script>
+  </body>
+</html>
