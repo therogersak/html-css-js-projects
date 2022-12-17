@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator - therogersak</title>
+  </head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      font-family: Montserrat;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    button {
+      background: #000;
+      color: #fff;
+      padding: 12px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div>
+      <h1 id="password">Password - @djhf555&^^@!xc</h1>
+      <button id="button">Generator Password</button>
+    </div>
+
+    <script>
+      const button = document.getElementById("button");
+      const show = document.getElementById("password");
+
+      button.addEventListener("click", () => {
+        var chars =
+          "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var passwordLength = 12;
+        var password = "";
+        for (var i = 0; i <= passwordLength; i++) {
+          var randomNumber = Math.floor(Math.random() * chars.length);
+          password += chars.substring(randomNumber, randomNumber + 1);
+        }
+        show.innerHTML = `Password - ${password}`;
+      });
+    </script>
+  </body>
+</html>
