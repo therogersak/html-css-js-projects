@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRAP AND DROP EVENT - THEROGERSAK</title>
+  </head>
+  <body>
+    <div
+      class="container"
+      style="background-color: black; height: 100vh; padding: 10px"
+    >
+      <img
+        style="width: 100px"
+        src="./Soccer_Ball_PNG_Clip_Art_Image.png"
+        alt=""
+        id="ball"
+      />
+    </div>
+
+    <script>
+      let ball = document.getElementById("ball");
+
+      ball.onmousedown = function (e) {
+        ball.style.position = "absolute";
+        ball.style.zIndex = 1000;
+        document.body.append(ball);
+
+        // centers the ball at (pageX, pageY) coordinates
+        function moveAt(pageX, pageY) {
+          ball.style.left = pageX - ball.offsetWidth / 2 + "px";
+          ball.style.top = pageY - ball.offsetHeight / 2 + "px";
+        }
+
+        moveAt(e.pageX, e.pageY);
+
+        function onMouseMove(e) {
+          moveAt(e.pageX, e.pageY);
+        }
+
+        // (2) move the ball on mousemove
+        document.addEventListener("mousemove", onMouseMove);
+
+        // (3) drag the ball, remove unneeded handlers
+        ball.onmouseup = function () {
+          document.removeEventListener("mousemove", onMouseMove);
+          ball.onmouseup = null;
+        };
+      };
+
+      ball.ondragstart = function () {
+        return false;
+      };
+    </script>
+  </body>
+</html>
